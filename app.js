@@ -66,7 +66,7 @@ mostrarRepos = () => {
 }
 
 mostrarSeguidores=()=>{
-    fetch(`${urlApi}/followers`)
+    fetch(`${urlApi}/followers?per_page=5`)
     .then(Response => Response.json())
     .then(data =>{
         const lista = document.getElementById("followers-container")
@@ -85,4 +85,5 @@ mostrarSeguidores=()=>{
 }
 CargarUsuario()
 mostrarRepos()
+
 mostrarSeguidores()
